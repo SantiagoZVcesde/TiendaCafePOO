@@ -1,7 +1,4 @@
 package prueba;
-
-import java.util.Scanner;
-
 public class cafe {
     String nombre;
     String region;
@@ -30,5 +27,16 @@ public class cafe {
         this.cantidadEnKilos = nuevaCantidad;
         System.out.println("\nCantidad actualizada a: " + cantidadEnKilos + " kg");
         System.out.println("Nuevo precio total: $" + calcularPrecioTotal() + " COP");
+    }
+
+    public void descuentoPorKilo(double porcentaje) {
+        if (porcentaje >= 0 && porcentaje <= 100) {
+            double descuento = precioPorKilo * (porcentaje / 100);
+            precioPorKilo -= descuento;
+            System.out.println("Se aplicó un " + porcentaje + "% de descuento");
+            System.out.println("Nuevo precio por kilo: $" + precioPorKilo );
+        } else {
+            System.out.println("Error: El porcentaje de descuento debe estar entre 0 y 100");
+        }
     }
 }
