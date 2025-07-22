@@ -18,6 +18,6 @@ public class Tiendacafe {
 
         cafe2.actualizaCantidad(10.8);
         cafe2.mostrarInformacion();
-
+        cafe2.descuentoPorKilo(20);
     }
 }
